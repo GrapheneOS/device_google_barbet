@@ -177,3 +177,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025I_JP.csv \
     $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025H_JP.csv
 
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false

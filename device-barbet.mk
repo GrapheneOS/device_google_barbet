@@ -28,11 +28,6 @@ endif
 
 PRODUCT_VENDOR_KERNEL_HEADERS := device/google/barbet-kernel/sm7250/kernel-headers
 
-# Enable ADSP SSR
-#TODO: It should be removed when ADSP SSR is enabled in device-common.mk again.
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.sys.ssr.restart_level=modem,adsp,slpi
-
 include build/make/target/product/iorap_large_memory_config.mk
 include device/google/redbull/device-common.mk
 

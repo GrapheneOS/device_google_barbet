@@ -23,3 +23,10 @@ on property:vendor.all.modules.ready=1
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
     group system wakelock
+
+on early-fs && property:ro.boot.hardware.revision=DEV1.0
+    write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 1075200
+    write /sys/devices/system/cpu/cpu4/online 0
+    write /sys/devices/system/cpu/cpu5/online 0
+    write /sys/devices/system/cpu/cpu6/online 0
+    write /sys/devices/system/cpu/cpu7/online 0

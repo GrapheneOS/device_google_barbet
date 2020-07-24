@@ -26,7 +26,7 @@ service vendor.mdm_helper /vendor/bin/mdm_helper
 
 on early-fs && property:ro.boot.hardware.revision=DEV1.0
     write /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq 1075200
-    write /sys/devices/system/cpu/cpu4/online 0
-    write /sys/devices/system/cpu/cpu5/online 0
-    write /sys/devices/system/cpu/cpu6/online 0
-    write /sys/devices/system/cpu/cpu7/online 0
+    write /sys/devices/virtual/thermal/cdev-by-name/cpu-isolate4/cur_state 1
+    write /sys/devices/virtual/thermal/cdev-by-name/cpu-isolate5/cur_state 1
+    write /sys/devices/virtual/thermal/cdev-by-name/cpu-isolate6/cur_state 1
+    write /sys/devices/virtual/thermal/cdev-by-name/cpu-isolate7/cur_state 1

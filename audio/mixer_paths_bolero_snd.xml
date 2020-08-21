@@ -1934,32 +1934,32 @@
     <path name="handset">
         <ctl name="TAS256X ASI Left Switch" value="1" />
         <ctl name="TAS256X ASI Right Switch" value="0" />
-        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="39" />
-        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="47" />
+        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="46" />
+        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="50" />
     </path>
 
-    <!--L:-16dB R:-8dB-->
+    <!--L:-18dB R:-10dB-->
     <path name="speaker">
         <ctl name="TAS256X ASI Left Switch" value="1" />
         <ctl name="TAS256X ASI Right Switch" value="1" />
-        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="39" />
-        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="47" />
+        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="46" />
+        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="50" />
     </path>
 
-    <!--L:-16dB R:-8dB-->
+    <!--L:-18dB R:-10dB-->
     <path name="speaker-mono">
         <ctl name="TAS256X ASI Left Switch" value="0" />
         <ctl name="TAS256X ASI Right Switch" value="1" />
-        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="39" />
-        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="47" />
+        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="46" />
+        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="50" />
     </path>
 
-    <!--L:-16dB R:-8dB-->
+    <!--L:-18dB R:-10dB-->
     <path name="speaker-mono-2">
         <ctl name="TAS256X ASI Left Switch" value="0" />
         <ctl name="TAS256X ASI Right Switch" value="1" />
-        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="39" />
-        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="47" />
+        <ctl name="TAS256X PLAYBACK VOLUME LEFT" value="46" />
+        <ctl name="TAS256X PLAYBACK VOLUME RIGHT" value="50" />
     </path>
 
     <path name="speaker-safe">

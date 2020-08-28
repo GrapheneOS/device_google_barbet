@@ -389,9 +389,9 @@ Vibrator::Vibrator(std::unique_ptr<HwApi> hwapi, std::unique_ptr<HwCal> hwcal)
         // 3. Get final long lra period after put the frequency' to formula
         mSteadyOlLraPeriodShift =
             freqPeriodFormula(freqPeriodFormula(lraPeriod) - longFreqencyShift);
-    } else {
-        mHwApi->setOlLraPeriod(lraPeriod);
     }
+
+    mHwApi->setOlLraPeriod(lraPeriod);
 
     mHwCal->getClickDuration(&mClickDuration);
     mHwCal->getTickDuration(&mTickDuration);

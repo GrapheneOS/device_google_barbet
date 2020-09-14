@@ -88,7 +88,7 @@
       <item>264.8221315</item>    <!--  1808 - 2981 -->
       <item>327.8974352</item>    <!--  2981 - 5000 -->
       <item>401.1676739</item>    <!--  5000 - 10000 -->
-      <item>494.0846144</item>    <!--  10000+ -->
+      <item>600.0</item>          <!--  10000+ -->
     </array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
@@ -121,7 +121,7 @@
 
     <!-- Default screen brightness setting
          Must be in the range specified by minimum and maximum. -->
-    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.32156862745</item>
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.29019607843</item>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
@@ -141,7 +141,7 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>2.0</item>
-        <item>450.0</item>
+        <item>500.0</item>
     </array>
 
     <!-- The nominal white coordinates, in CIE1931 XYZ color space, for Display White Balance to

@@ -31,3 +31,5 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
 -include vendor/google_devices/$(TARGET_BOOTLOADER_BOARD_NAME)/proprietary/BoardConfigVendor.mk
+
+-include device/google/barbet/soong/pixel_soong_config.mk

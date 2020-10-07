@@ -28,6 +28,8 @@ endif
 
 PRODUCT_VENDOR_KERNEL_HEADERS := device/google/barbet-kernel/sm7250/kernel-headers
 
+DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
+
 include build/make/target/product/iorap_large_memory_config.mk
 include device/google/redbull/device-common.mk
 
@@ -36,8 +38,6 @@ LOCAL_PATH := device/google/barbet
 
 PRODUCT_SOONG_NAMESPACES += \
     device/google/barbet
-
-DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 
 # Audio XMLs for barbet
 

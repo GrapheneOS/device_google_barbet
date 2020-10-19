@@ -26,8 +26,8 @@
 <!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
 <audio_platform_info>
     <acdb_ids>
-        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="14"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="14"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="513"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" acdb_id="513"/>
         <device name="SND_DEVICE_OUT_SPEAKER_SAFE" acdb_id="514"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="14"/>
@@ -40,7 +40,7 @@
         <device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" acdb_id="201"/>
         <device name="SND_DEVICE_OUT_SPEAKER_SAFE_AND_USB_HEADSET" acdb_id="514"/>
         <device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" acdb_id="56"/>
-        <device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" acdb_id="56"/>
+        <device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" acdb_id="10"/>
         <device name="SND_DEVICE_OUT_USB_HEADSET_SPEC" acdb_id="45"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_USB_HEADSET" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="513"/>
@@ -77,8 +77,8 @@
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="143"/>
         <device name="SND_DEVICE_IN_VOICE_REC_HEADSET_MIC" acdb_id="143"/>
         <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" acdb_id="44"/>
-        <device name="SND_DEVICE_IN_USB_HEADSET_MIC_AEC" acdb_id="55"/>
-        <device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" acdb_id="55"/>
+        <device name="SND_DEVICE_IN_USB_HEADSET_MIC_AEC" acdb_id="8"/>
+        <device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" acdb_id="8"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_USB_HEADSET_MIC" acdb_id="143"/>
         <device name="SND_DEVICE_IN_VOICE_RECOG_USB_HEADSET_MIC" acdb_id="143"/>
         <device name="SND_DEVICE_IN_VOICE_HEARING_AID" acdb_id="19"/>
@@ -89,10 +89,25 @@
         <device name="SND_DEVICE_IN_UNPROCESSED_STEREO_MIC" acdb_id="144"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_THREE_MIC" acdb_id="145"/>
         <device name="SND_DEVICE_IN_UNPROCESSED_HEADSET_MIC" acdb_id="147"/>
-        <device name="SND_DEVICE_IN_USB_HEADSET_MIC" acdb_id="44"/>
+        <device name="SND_DEVICE_IN_USB_HEADSET_MIC" acdb_id="55"/>
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_HANDSET_MIC" acdb_id="19"/>
         <device name="SND_DEVICE_IN_VOICE_TTY_VCO_SPEAKER_MIC" acdb_id="19"/>
     </acdb_ids>
+
+    <external_specific_dev>
+        <!-- condor -->
+        <ext_device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" usbid="18d1:5034" acdb_id="56" />
+        <ext_device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" usbid="18d1:5034" acdb_id="55" />
+        <!-- condor_Sprint -->
+        <ext_device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" usbid="18d1:5038" acdb_id="53" />
+        <ext_device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" usbid="18d1:5038" acdb_id="94" />
+        <!-- condor_Spirent-->
+        <ext_device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" usbid="18d1:5036" acdb_id="76" />
+        <ext_device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" usbid="18d1:5036" acdb_id="75" />
+        <!-- condor_VOIP-->
+        <ext_device name="SND_DEVICE_IN_USB_HEADSET_MIC_AEC" usbid="18d1:5034" acdb_id="55" />
+        <ext_device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" usbid="18d1:5033" acdb_id="10" />
+    </external_specific_dev>
 
     <module_ids>
         <aec>

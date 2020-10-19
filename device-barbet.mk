@@ -39,8 +39,10 @@ LOCAL_PATH := device/google/barbet
 PRODUCT_SOONG_NAMESPACES += \
     device/google/barbet
 
-# Audio XMLs for barbet
+PRODUCT_PACKAGES += \
+    libtasspkrprot
 
+# Audio XMLs for barbet
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/mixer_paths_bolero_snd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_bolero_snd.xml \
     $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \

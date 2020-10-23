@@ -462,9 +462,9 @@ static void DumpTouch(int fd) {
 	RunCommandToFd(fd, "Packaging Plant - Hibernate Memory",
                        {"/vendor/bin/sh", "-c",
                         "echo 01 FA 20 00 00 68 08 > /proc/fts/driver_test"});
-	RunCommandToFd(fd, "Packaging Plant - Read 10 bytes from Address 0x00043F28",
+	RunCommandToFd(fd, "Packaging Plant - Read 16 bytes from Address 0x00043FD8",
                        {"/vendor/bin/sh", "-c",
-                        "echo 02 FB 00 04 3F 28 00 0A 00 > /proc/fts/driver_test && "
+                        "echo 02 FB 00 04 3F D8 00 10 01 > /proc/fts/driver_test && "
                         "cat /proc/fts/driver_test"});
     }
 

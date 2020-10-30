@@ -389,9 +389,9 @@ Vibrator::Vibrator(std::unique_ptr<HwApi> hwapi, std::unique_ptr<HwCal> hwcal)
         // 3. Get final long lra period after put the frequency' to formula
         mSteadyOlLraPeriodShift =
             freqPeriodFormula(freqPeriodFormula(lraPeriod) - longFreqencyShift);
-    } else {
-        mHwApi->setOlLraPeriod(lraPeriod);
     }
+
+    mHwApi->setOlLraPeriod(lraPeriod);
 
     mHwCal->getClickDuration(&mClickDuration);
     mHwCal->getTickDuration(&mTickDuration);
@@ -464,9 +464,13 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
         if (temperature > TEMP_UPPER_BOUND) {
             mSteadyConfig->odClamp = &mSteadyTargetOdClamp[0];
             mSteadyConfig->olLraPeriod = mSteadyOlLraPeriod;
+#if defined(VIBRATOR_FACTORY_MODE)
+            // In facotry mode, we skip motionAwareness feature.
+#else
             if (!motionAwareness()) {
                 return on(timeoutMs, RTP_MODE, mSteadyConfig, 2);
             }
+#endif
         } else if (temperature < TEMP_LOWER_BOUND) {
             mSteadyConfig->odClamp = &STEADY_VOLTAGE_LOWER_BOUND;
             mSteadyConfig->olLraPeriod = mSteadyOlLraPeriodShift;
@@ -523,6 +527,8 @@ binder_status_t Vibrator::dump(int fd, const char **args, uint32_t numArgs) {
         dprintf(fd, "  Steady Shape: %" PRIu32 "\n", mSteadyConfig->shape);
         dprintf(fd, "  Steady OD Clamp: %" PRIu32 " %" PRIu32 " %" PRIu32 "\n",
                 mSteadyConfig->odClamp[0], mSteadyConfig->odClamp[1], mSteadyConfig->odClamp[2]);
+        dprintf(fd, "  Steady target G: %f %f %f\n", STEADY_TARGET_G[0],
+                STEADY_TARGET_G[1], STEADY_TARGET_G[2]);
         dprintf(fd, "  Steady OL LRA Period: %" PRIu32 "\n", mSteadyConfig->olLraPeriod);
     }
     if (mEffectConfig) {
@@ -531,6 +537,9 @@ binder_status_t Vibrator::dump(int fd, const char **args, uint32_t numArgs) {
                 "  Effect OD Clamp: %" PRIu32 " %" PRIu32 " %" PRIu32 " %" PRIu32 " %" PRIu32 "\n",
                 mEffectConfig->odClamp[0], mEffectConfig->odClamp[1], mEffectConfig->odClamp[2],
                 mEffectConfig->odClamp[3], mEffectConfig->odClamp[4]);
+        dprintf(fd, "  Effect target G: %f %f %f %f %f\n", EFFECT_TARGET_G[0],
+                EFFECT_TARGET_G[1], EFFECT_TARGET_G[2], EFFECT_TARGET_G[3],
+                EFFECT_TARGET_G[4]);
         dprintf(fd, "  Effect OL LRA Period: %" PRIu32 "\n", mEffectConfig->olLraPeriod);
     }
     dprintf(fd, "  Click Duration: %" PRIu32 "\n", mClickDuration);

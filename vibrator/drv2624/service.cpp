@@ -31,9 +31,15 @@ int main() {
         return EXIT_FAILURE;
     }
 
+#if defined(VIBRATOR_FACTORY_MODE)
+    // In facotry mode, we skip motionAwareness feature.
+    // So we don't need extra thread for listening Gsensor
+    ABinderProcess_setThreadPoolMaxThreadCount(0);
+#else
     // One thread for vibrator APIs and one for sensor callback
     // WARN: there could be an issue if two vibrator APIs are called simultaneously
     ABinderProcess_setThreadPoolMaxThreadCount(1);
+#endif
     std::shared_ptr<Vibrator> vib =
         ndk::SharedRefBase::make<Vibrator>(std::move(hwapi), std::make_unique<HwCal>());
 

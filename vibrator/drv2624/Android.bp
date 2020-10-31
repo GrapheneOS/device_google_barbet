@@ -67,6 +67,9 @@ cc_library {
     srcs: ["Vibrator.cpp"],
     export_include_dirs: ["."],
     proprietary: true,
+    cppflags: [
+        "-DVIBRATOR_FACTORY_MODE=0",
+    ],
 }
 
 cc_binary {
@@ -77,4 +80,7 @@ cc_binary {
     srcs: ["service.cpp"],
     static_libs: ["android.hardware.vibrator-impl_vendor.barbet"],
     proprietary: true,
+    cppflags: [
+        "-DVIBRATOR_FACTORY_MODE=0",
+    ],
 }

@@ -542,15 +542,28 @@
         <path name="echo-reference headphones" />
     </path>
 
-     <path name="echo-reference usb-headset">
-         <ctl name="AUDIO_REF_EC_UL10 MUX" value="USB_AUDIO_RX" />
-         <ctl name="EC Reference Channels" value="Two"/>
-     </path>
+    <path name="echo-reference usb-headset">
+        <ctl name="AUDIO_REF_EC_UL10 MUX" value="USB_AUDIO_RX" />
+        <ctl name="EC Reference Channels" value="Two"/>
+    </path>
 
-     <path name="echo-reference usb-headphones">
-         <ctl name="AUDIO_REF_EC_UL10 MUX" value="USB_AUDIO_RX" />
-         <ctl name="EC Reference Channels" value="Two"/>
-     </path>
+    <path name="echo-reference usb-headphones">
+        <ctl name="AUDIO_REF_EC_UL10 MUX" value="USB_AUDIO_RX" />
+        <ctl name="EC Reference Channels" value="Two"/>
+    </path>
+
+    <path name="echo-reference bt-sco">
+        <ctl name="AUDIO_REF_EC_UL10 MUX" value="SLIM_7_RX" />
+        <ctl name="EC Reference Channels" value="One"/>
+    </path>
+
+    <path name="echo-reference bt-sco-wb">
+        <path name="echo-reference bt-sco" />
+    </path>
+
+    <path name="echo-reference bt-sco-swb">
+        <path name="echo-reference bt-sco" />
+    </path>
 
     <path name="echo-reference display-port">
         <ctl name="AUDIO_REF_EC_UL1 MUX" value="DISPLAY_PORT" />
@@ -592,7 +605,19 @@
 
     <path name="echo-reference-voip usb-headphones">
         <path name="echo-reference usb-headphones" />
-     </path>
+    </path>
+
+    <path name="echo-reference-voip bt-sco">
+        <path name="echo-reference bt-sco" />
+    </path>
+
+    <path name="echo-reference-voip bt-sco-wb">
+        <path name="echo-reference bt-sco" />
+    </path>
+
+    <path name="echo-reference-voip bt-sco-swb">
+        <path name="echo-reference bt-sco" />
+    </path>
 
     <path name="echo-reference-voip headphones-44.1">
         <path name="echo-reference headphones-44.1" />
@@ -1945,20 +1970,19 @@
         <ctl name="TAS256X AMP OUTPUT LVL LEFT" value="1" />
     </path>
 
-    <!--L:-18dB R:-10dB-->
     <path name="speaker">
         <ctl name="TAS256X ASI Left Switch" value="1" />
         <ctl name="TAS256X ASI Right Switch" value="1" />
     </path>
 
-    <!--L:-18dB R:-10dB-->
     <path name="speaker-mono">
+        <ctl name="TAS25XX_ALGO_PROFILE" value="VOICE" />
         <ctl name="TAS256X ASI Left Switch" value="0" />
         <ctl name="TAS256X ASI Right Switch" value="1" />
     </path>
 
-    <!--L:-18dB R:-10dB-->
     <path name="speaker-mono-2">
+        <ctl name="TAS25XX_ALGO_PROFILE" value="VOICE" />
         <ctl name="TAS256X ASI Left Switch" value="0" />
         <ctl name="TAS256X ASI Right Switch" value="1" />
     </path>
@@ -2122,7 +2146,7 @@
     <path name="headset-mic">
         <path name="amic2" />
         <ctl name="ADC2 Volume" value="12" />
-        <ctl name="TX_DEC0 Volume" value="84" />
+        <ctl name="TX_DEC0 Volume" value="94" />
     </path>
 
     <path name="headset-mic-liquid">
@@ -2202,6 +2226,7 @@
 
     <path name="voice-headset-mic">
         <path name="headset-mic" />
+        <ctl name="TX_DEC0 Volume" value="84" />
     </path>
 
     <path name="speaker-and-headphones">
@@ -2356,6 +2381,8 @@
 
     <path name="handset-stereo-dmic-ef">
         <path name="handset-dmic-endfire" />
+        <ctl name="ADC1 Capture Volume" id="0" value="23"/>
+        <ctl name="ADC2 Capture Volume" id="0" value="23"/>
     </path>
 
     <path name="speaker-stereo-dmic-ef">
@@ -2539,18 +2566,18 @@
 
     <path name="unprocessed-handset-mic">
         <path name="handset-mic" />
-        <ctl name="ADC1 Capture Volume" id="0" value="27"/>
+        <ctl name="ADC1 Capture Volume" id="0" value="30"/>
     </path>
 
     <path name="unprocessed-mic">
         <path name="unprocessed-handset-mic" />
-        <ctl name="ADC1 Capture Volume" id="0" value="27"/>
+        <ctl name="ADC1 Capture Volume" id="0" value="30"/>
     </path>
 
     <path name="unprocessed-stereo-mic">
         <path name="voice-rec-dmic-ef" />
-        <ctl name="ADC1 Capture Volume" id="0" value="27"/>
-        <ctl name="ADC2 Capture Volume" id="0" value="27"/>
+        <ctl name="ADC1 Capture Volume" id="0" value="30"/>
+        <ctl name="ADC2 Capture Volume" id="0" value="30"/>
     </path>
 
     <path name="unprocessed-three-mic">

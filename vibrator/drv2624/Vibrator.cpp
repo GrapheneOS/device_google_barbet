@@ -39,6 +39,7 @@ namespace vibrator {
 
 using ::android::NO_ERROR;
 using ::android::UNEXPECTED_NULL;
+using ::android::NO_INIT;
 
 static constexpr int8_t MAX_RTP_INPUT = 127;
 static constexpr int8_t MIN_RTP_INPUT = 0;
@@ -75,7 +76,9 @@ static struct timespec sGetTime;
 #define SENSOR_DATA_NUM 20
 // Set sensing period to 2s
 #define SENSING_PERIOD 2000000000
+#define VIBRATION_MOTION_TIME_THRESHOLD 100
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+#define ENABLE_MOTION_AWARENESS(x) x>VIBRATION_MOTION_TIME_THRESHOLD? true:false
 
 int GSensorCallback(__attribute__((unused)) int fd, __attribute__((unused)) int events,
                     void *data) {
@@ -98,40 +101,39 @@ int32_t PollGSensor() {
     // Get proximity sensor events from the NDK
     sensorManager = ASensorManager_getInstanceForPackage("");
     if (!sensorManager) {
-        ALOGI("Chase %s: Sensor manager is NULL.\n", __FUNCTION__);
-        err = UNEXPECTED_NULL;
-        return 0;
+        ALOGE("%s: Sensor manager is NULL.\n", __func__);
+        return UNEXPECTED_NULL;
     }
     GSensor = ASensorManager_getDefaultSensor(sensorManager, ASENSOR_TYPE_GRAVITY);
     if (GSensor == nullptr) {
-        ALOGE("%s:Chase Unable to get g sensor\n", __func__);
-    } else {
-        looper = ALooper_forThread();
-        if (looper == nullptr) {
-            looper = ALooper_prepare(ALOOPER_PREPARE_ALLOW_NON_CALLBACKS);
-        }
-        context.queue =
-            ASensorManager_createEventQueue(sensorManager, looper, 0, GSensorCallback, &context);
+        ALOGE("%s: Unable to get g sensor\n", __func__);
+        return UNEXPECTED_NULL;
+    }
 
-        err = ASensorEventQueue_registerSensor(context.queue, GSensor, 0, 0);
-        if (err != NO_ERROR) {
-            ALOGE("Chase %s: Error %d registering G sensor with event queue.\n", __FUNCTION__, err);
-            return 0;
-        }
-        if (err < 0) {
-            ALOGE("%s:Chase Unable to register for G sensor events\n", __func__);
-        } else {
-            for (counter = 0; counter < SENSOR_DATA_NUM; counter++) {
-                ALooper_pollOnce(5, nullptr, nullptr, nullptr);
-            }
+    looper = ALooper_forThread();
+    if (looper == nullptr) {
+        looper = ALooper_prepare(ALOOPER_PREPARE_ALLOW_NON_CALLBACKS);
+    }
+
+    context.queue =
+        ASensorManager_createEventQueue(sensorManager, looper, 0, GSensorCallback, &context);
+
+    err = ASensorEventQueue_registerSensor(context.queue, GSensor, 0, 0);
+    if (err < 0) {
+        ALOGE("%s:Unable to register for G sensor events\n", __func__);
+        return NO_INIT;
+    } else {
+        for (counter = 0; counter < SENSOR_DATA_NUM; counter++) {
+            ALooper_pollOnce(5, nullptr, nullptr, nullptr);
         }
     }
+
     if (sensorManager != nullptr && context.queue != nullptr) {
         ASensorEventQueue_disableSensor(context.queue, GSensor);
         ASensorManager_destroyEventQueue(sensorManager, context.queue);
     }
 
-    return 0;
+    return NO_ERROR;
 }
 
 // Temperature protection upper bound 10°C and lower bound 5°C
@@ -467,7 +469,7 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
 #if defined(VIBRATOR_FACTORY_MODE)
             // In facotry mode, we skip motionAwareness feature.
 #else
-            if (!motionAwareness()) {
+            if (ENABLE_MOTION_AWARENESS(timeoutMs) && (!motionAwareness())) {
                 return on(timeoutMs, RTP_MODE, mSteadyConfig, 2);
             }
 #endif

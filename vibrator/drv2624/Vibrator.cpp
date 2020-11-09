@@ -466,7 +466,7 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
         if (temperature > TEMP_UPPER_BOUND) {
             mSteadyConfig->odClamp = &mSteadyTargetOdClamp[0];
             mSteadyConfig->olLraPeriod = mSteadyOlLraPeriod;
-#if defined(VIBRATOR_FACTORY_MODE)
+#if (VIBRATOR_FACTORY_MODE)
             // In facotry mode, we skip motionAwareness feature.
 #else
             if (ENABLE_MOTION_AWARENESS(timeoutMs) && (!motionAwareness())) {

@@ -31,7 +31,7 @@ int main() {
         return EXIT_FAILURE;
     }
 
-#if defined(VIBRATOR_FACTORY_MODE)
+#if (VIBRATOR_FACTORY_MODE)
     // In facotry mode, we skip motionAwareness feature.
     // So we don't need extra thread for listening Gsensor
     ABinderProcess_setThreadPoolMaxThreadCount(0);

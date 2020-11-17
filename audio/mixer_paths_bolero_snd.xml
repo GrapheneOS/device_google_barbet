@@ -511,6 +511,7 @@
     <ctl name="TAS256X AMP OUTPUT LVL LEFT" value="16" />
     <ctl name="TAS256X AMP OUTPUT LVL RIGHT" value="16" />
     <ctl name="TAS25XX_ALGO_PROFILE" value="MUSIC" />
+    <ctl name="TAS25XX_ALGO_BYPASS" value="FALSE" />
     <!-- TAS2562 control setting end-->
 
     <!-- These are audio route (FE to BE) specific mixer settings -->

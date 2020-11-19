@@ -77,8 +77,8 @@ static struct timespec sGetTime;
 // Set sensing period to 2s
 #define SENSING_PERIOD 2000000000
 #define VIBRATION_MOTION_TIME_THRESHOLD 100
-#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
-#define ENABLE_MOTION_AWARENESS(x) x>VIBRATION_MOTION_TIME_THRESHOLD? true:false
+#define ARRAY_SIZE(a) ((sizeof(a)) / (sizeof((a)[0])))
+#define ENABLE_MOTION_AWARENESS(x) ((x) > (VIBRATION_MOTION_TIME_THRESHOLD)? (true):(false))
 
 int GSensorCallback(__attribute__((unused)) int fd, __attribute__((unused)) int events,
                     void *data) {

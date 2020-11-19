@@ -184,10 +184,10 @@
     <!-- Display cutout configuration -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
       <!-- The hole punch dimensions are this:
-      M 38,78 a 39,39 0 1,0 78,0 a 39,39 0 1,0 -78,0
-      but using a radius 40 circle for now to see the antialiasing.
+      M 43,75 a 31,31 0 1,0 62,0 a 31,31 0 1,0 -62,0
+      but using a radius 32 circle for now to see the antialiasing.
       -->
-        M 37,77 a 40,40 0 1 0 80,0 40,40 0 1 0 -80,0 Z
+        M 41,73 a 32,32 0 1 0 64,0 a 32,32 0 1 0 -64,0 Z
 
         @left
     </string>

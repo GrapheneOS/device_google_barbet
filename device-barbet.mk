@@ -30,8 +30,14 @@ PRODUCT_VENDOR_KERNEL_HEADERS := device/google/barbet-kernel/sm7250/kernel-heade
 
 DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 
+PRODUCT_DEVICE_SVN_OVERRIDE := true
+
 include build/make/target/product/iorap_large_memory_config.mk
 include device/google/redbull/device-common.mk
+
+# Increment the SVN for any official public releases
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.build.svn=1
 
 # LOCAL_PATH is device/google/redbull before this
 LOCAL_PATH := device/google/barbet

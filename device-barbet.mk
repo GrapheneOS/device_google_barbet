@@ -164,20 +164,10 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth Tx power caps for barbet
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G6QU3.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025E.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025E_US.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025I_US.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025H_US.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025I.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025E_EU.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025I_EU.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025H_EU.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025H.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025E_JP.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025I_JP.csv \
-    $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_G025H_JP.csv
+    $(LOCAL_PATH)/bluetooth_power_limits_barbet_ROW.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_barbet_us.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_barbet_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
+    $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \

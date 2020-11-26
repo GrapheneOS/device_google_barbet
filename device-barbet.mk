@@ -172,3 +172,10 @@ PRODUCT_COPY_FILES += \
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayG025H
+
+# Set support hide display cutout feature
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_hide_display_cutout=true
+
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay

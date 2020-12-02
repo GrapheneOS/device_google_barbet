@@ -68,7 +68,7 @@ class HwApi : public Vibrator::HwApi, private HwApiBase {
         open("device/lra_wave_shape", &mLraWaveShape);
         open("device/od_clamp", &mOdClamp);
         // TODO: for future new architecture: b/149610125
-        openFull("/sys/devices/virtual/thermal/tz-by-name/rf-front-therm/temp", &mPATemp);
+        openFull("/sys/devices/virtual/thermal/tz-by-name/rf-bottom-therm/temp", &mPATemp);
     }
 
     template <typename T>

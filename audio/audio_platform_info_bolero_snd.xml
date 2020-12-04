@@ -40,7 +40,7 @@
         <device name="SND_DEVICE_OUT_VOICE_HAC_HANDSET" acdb_id="201"/>
         <device name="SND_DEVICE_OUT_SPEAKER_SAFE_AND_USB_HEADSET" acdb_id="514"/>
         <device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" acdb_id="56"/>
-        <device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" acdb_id="10"/>
+        <device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" acdb_id="56"/>
         <device name="SND_DEVICE_OUT_USB_HEADSET_SPEC" acdb_id="45"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_USB_HEADSET" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="513"/>
@@ -106,6 +106,8 @@
         <ext_device name="SND_DEVICE_IN_VOICE_USB_HEADSET_MIC" usbid="18d1:5036" acdb_id="75" />
         <!-- condor_VOIP-->
         <ext_device name="SND_DEVICE_IN_USB_HEADSET_MIC_AEC" usbid="18d1:5034" acdb_id="55" />
+        <!-- BB -->
+        <ext_device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" usbid="18d1:5033" acdb_id="10" />
         <ext_device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" usbid="18d1:5033" acdb_id="10" />
     </external_specific_dev>
 
@@ -221,6 +223,8 @@
         <device name="SND_DEVICE_OUT_SPEAKER_SAFE_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="QUIN_TDM_RX_0-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="QUIN_TDM_RX_0-and-SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="QUIN_TDM_RX_0-and-SLIMBUS_7_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_USB_HEADPHONES" backend="usb-headphones" interface="USB_AUDIO_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_USB_HEADSET" backend="usb-headset" interface="USB_AUDIO_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" backend="headphones" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADSET" backend="headset" interface="RX_CDC_DMA_RX_0"/>
         <device name="SND_DEVICE_OUT_VOICE_ANC_HEADSET" backend="headphones" interface="RX_CDC_DMA_RX_0"/>

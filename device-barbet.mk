@@ -171,7 +171,8 @@ PRODUCT_COPY_FILES += \
 
 # SKU specific RROs
 PRODUCT_PACKAGES += \
-    SettingsOverlayG025H
+    SettingsOverlayG025H \
+    SettingsOverlayG4S1M
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \

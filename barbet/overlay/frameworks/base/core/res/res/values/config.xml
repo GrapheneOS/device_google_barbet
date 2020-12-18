@@ -54,9 +54,9 @@
     <string name="config_dozeTapSensorType" translatable="false">com.google.sensor.single_touch</string>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">g025e</string>
+    <string name="config_mms_user_agent" translatable="false">g1f8f</string>
     <!-- MMS user agent profile url -->
-    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/G025E.xml</string>
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://www.gstatic.com/android/sms/G1F8F.xml</string>
 
     <!-- Array of desired screen brightness in nits corresponding to the lux values
       in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and

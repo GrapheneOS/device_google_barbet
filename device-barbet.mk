@@ -169,7 +169,7 @@ include device/google/barbet/fingerprint.mk
 
 # NFC
 PRODUCT_COPY_FILES += \
-    device/google/barbet/nfc/libnfc-hal-st-G6QU3.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st-G6QU3.conf
+    device/google/barbet/nfc/libnfc-hal-st-G4S1M.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st-G4S1M.conf
 
 # Bluetooth Tx power caps for barbet
 PRODUCT_COPY_FILES += \

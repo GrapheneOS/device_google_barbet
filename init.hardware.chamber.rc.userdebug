@@ -21,6 +21,12 @@ on property:persist.vendor.disable.thermal.control=1
   write /sys/devices/virtual/thermal/tz-by-name/skin-therm-cpu/mode disabled
   write /sys/devices/virtual/thermal/tz-by-name/skin-therm-monitor/emul_temp 25000
   write /sys/devices/virtual/thermal/tz-by-name/skin-therm-monitor/mode disabled
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt/emul_temp 25000
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt/mode disabled
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-cpu/emul_temp 25000
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-cpu/mode disabled
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-monitor/emul_temp 25000
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-monitor/mode disabled
   write /sys/devices/virtual/thermal/tz-by-name/cellular-emergency/emul_temp 25000
   write /sys/devices/virtual/thermal/tz-by-name/cellular-emergency/mode disabled
   write /sys/devices/virtual/thermal/tz-by-name/usbc-therm-adc/emul_temp 25000
@@ -36,6 +42,12 @@ on property:persist.vendor.disable.thermal.control=0
   write /sys/devices/virtual/thermal/tz-by-name/skin-therm-cpu/mode enabled
   write /sys/devices/virtual/thermal/tz-by-name/skin-therm-monitor/emul_temp 0
   write /sys/devices/virtual/thermal/tz-by-name/skin-therm-monitor/mode enabled
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt/emul_temp 0
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt/mode enabled
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-cpu/emul_temp 0
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-cpu/mode enabled
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-monitor/emul_temp 0
+  write /sys/devices/virtual/thermal/tz-by-name/skin-virt-monitor/mode enabled
   write /sys/devices/virtual/thermal/tz-by-name/cellular-emergency/emul_temp 0
   write /sys/devices/virtual/thermal/tz-by-name/cellular-emergency/mode enabled
   write /sys/devices/virtual/thermal/tz-by-name/usbc-therm-adc/emul_temp 0

@@ -150,9 +150,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     sensors.$(PRODUCT_HARDWARE) \
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/powerhint_$(PRODUCT_HARDWARE)_dvt.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_$(PRODUCT_HARDWARE)_dvt.json
+
 # Thermal HAL config
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+    $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE)_evt.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_$(PRODUCT_HARDWARE)_evt.json \
+    $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE)_dvt.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_$(PRODUCT_HARDWARE)_dvt.json
 
 # Support to disable thermal protection at run time
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
@@ -169,7 +173,7 @@ include device/google/barbet/fingerprint.mk
 
 # NFC
 PRODUCT_COPY_FILES += \
-    device/google/barbet/nfc/libnfc-hal-st-G6QU3.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st-G6QU3.conf
+    device/google/barbet/nfc/libnfc-hal-st-G4S1M.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st-G4S1M.conf
 
 # Bluetooth Tx power caps for barbet
 PRODUCT_COPY_FILES += \

@@ -74,6 +74,8 @@ static struct timespec sGetTime;
 #define MAX_VOLTAGE 3.2
 #define FLOAT_EPS 1e-7
 #define SENSOR_DATA_NUM 20
+// Set GSensor polling time as 3ms
+#define GSENSOR_POLLING_TIME 3
 // Set sensing period to 2s
 #define SENSING_PERIOD 2000000000
 #define VIBRATION_MOTION_TIME_THRESHOLD 100
@@ -124,7 +126,7 @@ int32_t PollGSensor() {
         return NO_INIT;
     } else {
         for (counter = 0; counter < SENSOR_DATA_NUM; counter++) {
-            ALooper_pollOnce(5, nullptr, nullptr, nullptr);
+            ALooper_pollOnce(GSENSOR_POLLING_TIME, nullptr, nullptr, nullptr);
         }
     }
 

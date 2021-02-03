@@ -60,8 +60,8 @@ static constexpr char WAVEFORM_DOUBLE_CLICK_EFFECT_SEQ[] = "3 0";
 static constexpr char WAVEFORM_HEAVY_CLICK_EFFECT_SEQ[] = "4 0";
 
 // UT team design those target G values
-static constexpr std::array<float, 5> EFFECT_TARGET_G = {0.115, 0.175, 0.21, 0.36, 0.45};
-static constexpr std::array<float, 3> STEADY_TARGET_G = {0.95, 0.90, 0.60};
+static constexpr std::array<float, 5> EFFECT_TARGET_G = {0.115, 0.160, 0.190, 0.310, 0.45};
+static constexpr std::array<float, 3> STEADY_TARGET_G = {0.95, 0.90, 0.50};
 
 struct SensorContext {
     ASensorEventQueue *queue;
@@ -74,6 +74,8 @@ static struct timespec sGetTime;
 #define MAX_VOLTAGE 3.2
 #define FLOAT_EPS 1e-7
 #define SENSOR_DATA_NUM 20
+// Set GSensor polling time as 3ms
+#define GSENSOR_POLLING_TIME 3
 // Set sensing period to 2s
 #define SENSING_PERIOD 2000000000
 #define VIBRATION_MOTION_TIME_THRESHOLD 100
@@ -124,7 +126,7 @@ int32_t PollGSensor() {
         return NO_INIT;
     } else {
         for (counter = 0; counter < SENSOR_DATA_NUM; counter++) {
-            ALooper_pollOnce(5, nullptr, nullptr, nullptr);
+            ALooper_pollOnce(GSENSOR_POLLING_TIME, nullptr, nullptr, nullptr);
         }
     }
 

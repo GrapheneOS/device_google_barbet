@@ -184,6 +184,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth_power_limits_barbet_eu.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
     $(LOCAL_PATH)/bluetooth_power_limits_barbet_jp.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv
 
+# Keyboard bottom padding in dp for portrait mode
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_b=14.4
+
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayG025H \

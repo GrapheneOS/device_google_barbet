@@ -151,12 +151,12 @@ PRODUCT_PACKAGES += \
     sensors.$(PRODUCT_HARDWARE) \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/powerhint_$(PRODUCT_HARDWARE)_dvt.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_$(PRODUCT_HARDWARE)_dvt.json
+    $(LOCAL_PATH)/powerhint_$(PRODUCT_HARDWARE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint_$(PRODUCT_HARDWARE).json
 
 # Thermal HAL config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE)_evt.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_$(PRODUCT_HARDWARE)_evt.json \
-    $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE)_dvt.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_$(PRODUCT_HARDWARE)_dvt.json
+    $(LOCAL_PATH)/thermal_info_config_$(PRODUCT_HARDWARE).json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config_$(PRODUCT_HARDWARE).json
 
 # Support to disable thermal protection at run time
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))

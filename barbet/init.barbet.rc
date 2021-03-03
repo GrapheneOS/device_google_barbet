@@ -47,23 +47,24 @@ on early-fs && property:ro.boot.hardware.revision=DEV1.0
     write /sys/devices/virtual/thermal/cdev-by-name/cpu-isolate7/cur_state 1
 
 on init
+    setprop vendor.thermal.config "thermal_info_config_barbet.json"
+    setprop vendor.powerhal.config "powerhint_barbet.json"
+
+on late-init && property:ro.boot.hardware.revision=DEV1.0
     setprop vendor.thermal.config "thermal_info_config_barbet_evt.json"
+    setprop vendor.powerhal.config "powerhint.json"
 
-on late-init && property:ro.boot.hardware.revision=DVT1.0
-    setprop vendor.thermal.config "thermal_info_config_barbet_dvt.json"
-    setprop vendor.powerhal.config "powerhint_barbet_dvt.json"
+on late-init && property:ro.boot.hardware.revision=EVT1.0
+    setprop vendor.thermal.config "thermal_info_config_barbet_evt.json"
+    setprop vendor.powerhal.config "powerhint.json"
 
-on late-init && property:ro.boot.hardware.revision=DVT1.1
-    setprop vendor.thermal.config "thermal_info_config_barbet_dvt.json"
-    setprop vendor.powerhal.config "powerhint_barbet_dvt.json"
+on late-init && property:ro.boot.hardware.revision=EVT1.1
+    setprop vendor.thermal.config "thermal_info_config_barbet_evt.json"
+    setprop vendor.powerhal.config "powerhint.json"
 
-on late-init && property:ro.boot.hardware.revision=PVT1.0
-    setprop vendor.thermal.config "thermal_info_config_barbet_dvt.json"
-    setprop vendor.powerhal.config "powerhint_barbet_dvt.json"
-
-on late-init && property:ro.boot.hardware.revision=MP1.0
-    setprop vendor.thermal.config "thermal_info_config_barbet_dvt.json"
-    setprop vendor.powerhal.config "powerhint_barbet_dvt.json"
+on late-init && property:ro.boot.hardware.revision=EVT1.2
+    setprop vendor.thermal.config "thermal_info_config_barbet_evt.json"
+    setprop vendor.powerhal.config "powerhint.json"
 
 on late-init
     write /sys/devices/virtual/thermal/tz-by-name/skin-sdm/mode enabled

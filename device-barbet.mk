@@ -189,3 +189,6 @@ PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_b=14.4
 PRODUCT_PACKAGES += \
     SettingsOverlayG025H \
     SettingsOverlayG4S1M
+
+PRODUCT_COPY_FILES += \
+    device/google/barbet/default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/default-permissions.xml

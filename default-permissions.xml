@@ -57,6 +57,16 @@
         <permission name="android.permission.READ_PHONE_NUMBERS" fixed="false"/>
     </exception>
 
+    <exception
+            package="com.verizon.mips.services">
+        <!-- Call -->
+        <permission name="android.permission.PROCESS_OUTGOING_CALLS" fixed="false"/>
+        <!-- Phone -->
+        <permission name="android.permission.READ_PHONE_STATE" fixed="false"/>
+        <!-- SMS -->
+        <permission name="android.permission.RECEIVE_SMS" fixed="false"/>
+    </exception>
+
     <exception package="com.google.android.wfcactivation">
         <!-- SMS -->
         <permission name="android.permission.RECEIVE_WAP_PUSH" fixed="false"/>

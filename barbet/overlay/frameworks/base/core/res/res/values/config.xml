@@ -237,4 +237,7 @@
     <bool name="config_telephony5gStandalone">true</bool>
     <!-- Whether the device enable the non-standalone (NSA) mode of 5G NR.-->
     <bool name="config_telephony5gNonStandalone">true</bool>
+
+    <!-- Enable CBRS support -->
+    <bool translatable="false" name="config_cbrs_supported">true</bool>
 </resources>

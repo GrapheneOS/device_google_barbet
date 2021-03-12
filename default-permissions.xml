@@ -67,4 +67,18 @@
         <!-- SMS -->
         <permission name="android.permission.RECEIVE_WAP_PUSH" fixed="false"/>
     </exception>
+
+    <exception package="com.google.android.cbrsnetworkmonitor">
+        <!-- Location access to create CBRS geofences-->
+        <permission name="android.permission.ACCESS_FINE_LOCATION" fixed="true"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="true"/>
+    </exception>
+
+    <exception package="com.google.android.apps.scone">
+        <!-- NLP Location access to determine proximity to country border -->
+        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="false"/>
+        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="false"/>
+        <!-- Used to call ActivityTransition API for Smart PNO -->
+        <permission name="android.permission.ACTIVITY_RECOGNITION" fixed="false"/>
+    </exception>
 </exceptions>

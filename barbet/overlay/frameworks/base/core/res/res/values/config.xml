@@ -189,20 +189,15 @@
 
     <!-- Display cutout configuration -->
     <string translatable="false" name="config_mainBuiltInDisplayCutout">
-      <!-- The hole punch dimensions are this:
-      M 43,75 a 31,31 0 1,0 62,0 a 31,31 0 1,0 -62,0
-      but using a radius 32 circle for now to see the antialiasing.
-      -->
-        M 41,73 a 32,32 0 1 0 64,0 a 32,32 0 1 0 -64,0 Z
-
+        M 41.5,73 a 32,32 0 1 0 64,0 a 32,32 0 1 0 -64,0 Z
         @left
     </string>
 
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
         M 0.0,0.0
-        h 136
-        v 136
-        h -136
+        h 121
+        v 121
+        h -121
         Z
         @left
     </string>
@@ -212,12 +207,10 @@
 
     <!-- Height of the status bar in portrait. The height should be
          Max((status bar content height + waterfall top size), top cutout size) -->
-    <dimen name="status_bar_height_portrait">136px</dimen>
+    <dimen name="status_bar_height_portrait">145px</dimen>
     <dimen name="status_bar_height_landscape">28dp</dimen>
     <!-- Height of area above QQS where battery/time go (equal to status bar) -->
-    <dimen name="quick_qs_offset_height">136px</dimen>
-    <!-- Total height of QQS (quick_qs_offset_height + 128) -->
-    <dimen name="quick_qs_total_height">488px</dimen>
+    <dimen name="quick_qs_offset_height">145px</dimen>
 
     <!-- Enable CBRS support -->
     <bool translatable="false" name="config_cbrs_supported">true</bool>

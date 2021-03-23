@@ -190,7 +190,8 @@ PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_b=14.4
 # SKU specific RROs
 PRODUCT_PACKAGES += \
     SettingsOverlayG025H \
-    SettingsOverlayG4S1M
+    SettingsOverlayG4S1M \
+    SettingsOverlayG1F8F
 
 # Set support hide display cutout feature
 PRODUCT_PRODUCT_PROPERTIES += \

@@ -57,12 +57,6 @@
         <permission name="android.permission.READ_PHONE_NUMBERS" fixed="false"/>
     </exception>
 
-    <exception package="com.google.android.connectivitythermalpowermanager">
-        <!-- Location access to determine device physical channel configurations-->
-        <permission name="android.permission.ACCESS_COARSE_LOCATION" fixed="true"/>
-        <permission name="android.permission.ACCESS_BACKGROUND_LOCATION" fixed="true"/>
-    </exception>
-
     <exception package="com.verizon.mips.services">
         <!-- Call -->
         <permission name="android.permission.PROCESS_OUTGOING_CALLS" fixed="false"/>

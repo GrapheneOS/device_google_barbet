@@ -2408,8 +2408,8 @@
 
     <path name="voice-rec-dmic-ef">
         <path name="dmic-endfire" />
-        <ctl name="ADC1 Capture Volume" id="0" value="52" />
-        <ctl name="ADC2 Capture Volume" id="0" value="52" />
+        <ctl name="ADC1 Capture Volume" id="0" value="23" />
+        <ctl name="ADC2 Capture Volume" id="0" value="23" />
     </path>
 
     <path name="voice-rec-dmic-ef-fluence">

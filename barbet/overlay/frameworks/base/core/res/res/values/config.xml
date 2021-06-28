@@ -209,9 +209,9 @@
 
     <string translatable="false" name="config_mainBuiltInDisplayCutoutRectApproximation">
         M 0.0,0.0
-        h 121
-        v 121
-        h -121
+        h 136
+        v 136
+        h -136
         Z
         @left
     </string>

@@ -32,7 +32,6 @@ DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 
 PRODUCT_DEVICE_SVN_OVERRIDE := true
 
-include build/make/target/product/iorap_large_memory_config.mk
 include device/google/redbull/device-common.mk
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)

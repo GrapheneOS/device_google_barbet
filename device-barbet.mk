@@ -16,7 +16,7 @@
 
 PRODUCT_HARDWARE := barbet
 
-TARGET_PREBUILT_KERNEL := device/google/bramble-kernel/Image.lz4
+TARGET_PREBUILT_KERNEL := device/google/barbet-kernel/Image.lz4
 ifeq ($(TARGET_PREBUILT_KERNEL),)
     ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
         LOCAL_KERNEL := device/google/barbet-kernel/Image.lz4
@@ -27,7 +27,7 @@ else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-PRODUCT_VENDOR_KERNEL_HEADERS := device/google/bramble-kernel/sm7250/kernel-headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/google/barbet-kernel/sm7250/kernel-headers
 
 DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 

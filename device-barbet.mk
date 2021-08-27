@@ -34,7 +34,7 @@ DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 PRODUCT_DEVICE_SVN_OVERRIDE := true
 
 include build/make/target/product/iorap_large_memory_config.mk
-include device/google/redbull/device-common.mk
+include device/google/redbull-barbet/device-common.mk
 
 # Increment the SVN for any official public releases
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -49,7 +49,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     zygote.critical_window.minute=10
 
-# LOCAL_PATH is device/google/redbull before this
+# LOCAL_PATH is device/google/redbull-barbet before this
 LOCAL_PATH := device/google/barbet
 
 PRODUCT_SOONG_NAMESPACES += \

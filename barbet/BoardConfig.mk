@@ -19,7 +19,7 @@ TARGET_SCREEN_DENSITY := 420
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 165
 USES_DEVICE_GOOGLE_BARBET := true
 
-include device/google/redbull/BoardConfig-common.mk
+include device/google/redbull-barbet/BoardConfig-common.mk
 
 # Allow LZ4 compression
 BOARD_RAMDISK_USE_LZ4 := true

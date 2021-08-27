@@ -27,7 +27,7 @@ else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-PRODUCT_VENDOR_KERNEL_HEADERS := device/google/barbet-kernel/sm7250/kernel-headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/google/bramble-kernel/sm7250/kernel-headers
 
 DEVICE_PACKAGE_OVERLAYS += device/google/barbet/barbet/overlay
 

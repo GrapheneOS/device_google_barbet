@@ -56,4 +56,4 @@ PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_barbet
 PRODUCT_DEVICE := barbet
-PRODUCT_MODEL := AOSP on barbet
+PRODUCT_MODEL := Pixel 5a

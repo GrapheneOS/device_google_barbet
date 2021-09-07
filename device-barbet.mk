@@ -55,6 +55,8 @@ LOCAL_PATH := device/google/barbet
 PRODUCT_SOONG_NAMESPACES += \
     device/google/barbet
 
+DEVICE_PACKAGE_OVERLAYS += device/google/barbet/overlay
+
 PRODUCT_PACKAGES += \
     libtasspkrprot
 

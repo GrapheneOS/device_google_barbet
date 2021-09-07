@@ -208,3 +208,7 @@ PRODUCT_COPY_FILES += \
 # (b/183612348): Enable skia reduceOpsTaskSplitting
 PRODUCT_PROPERTY_OVERRIDES += \
     renderthread.skia.reduceopstasksplitting=true
+
+# Set of *_EXPERIENCE features for barbet
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/google_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/google_experience.xml

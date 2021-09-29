@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_COPY_FILES += \
-    device/google/redbull/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
-
 #
 # All components inherited here go to system image
 #

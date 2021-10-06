@@ -17,6 +17,8 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_MODULE := android.hardware.dumpstate@1.1-service.barbet
+LOCAL_LICENSE_KINDS := SPDX-license-identifier-Apache-2.0
+LOCAL_LICENSE_CONDITIONS := notice
 LOCAL_INIT_RC := android.hardware.dumpstate@1.1-service.barbet.rc
 LOCAL_MODULE_RELATIVE_PATH := hw
 
@@ -32,8 +34,7 @@ LOCAL_SHARED_LIBRARIES := \
     libdumpstateutil \
     libhidlbase \
     liblog \
-    libutils \
-    libpcap
+    libutils
 
 LOCAL_CFLAGS := -Werror -Wall
 

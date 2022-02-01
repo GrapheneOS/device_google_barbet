@@ -109,8 +109,11 @@ ifeq ($(wildcard vendor/google_devices/barbet/proprietary/device-vendor-barbet.m
     BUILD_WITHOUT_VENDOR := true
 endif
 
+# USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service.barbet
+    android.hardware.usb-service.barbet
+PRODUCT_PACKAGES += \
+    android.hardware.usb.gadget-service.barbet
 
 # Vibrator HAL
 PRODUCT_PACKAGES += \

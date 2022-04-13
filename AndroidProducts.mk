@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/barbet.mk \
+    $(LOCAL_DIR)/aosp_barbet.mk \
 
 COMMON_LUNCH_CHOICES := \
-    barbet-userdebug \
+    aosp_barbet-userdebug \

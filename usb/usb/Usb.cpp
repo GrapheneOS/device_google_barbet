@@ -612,7 +612,7 @@ Status getPortStatusHelper(android::hardware::usb::Usb *usb,
             } else {
                 (*currentPortStatus)[i].usbDataStatus.push_back(UsbDataStatus::ENABLED);
             }
-	    (*currentPortStatus)[i].powerBrickStatus = PowerBrickStatus::UNKNOWN;
+            (*currentPortStatus)[i].powerBrickStatus = PowerBrickStatus::UNKNOWN;
 
             ALOGI("%d:%s connected:%d canChangeMode:%d canChagedata:%d canChangePower:%d "
                 "usbDataEnabled:%d",
@@ -627,6 +627,7 @@ Status getPortStatusHelper(android::hardware::usb::Usb *usb,
 done:
     return Status::ERROR;
 }
+
 Status queryPowerTransferStatus(std::vector<PortStatus> *currentPortStatus) {
     string enabled;
 

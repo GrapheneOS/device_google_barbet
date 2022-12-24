@@ -34,11 +34,13 @@ PRODUCT_DEVICE_SVN_OVERRIDE := true
 
 include device/google/redbull/device-common.mk
 
+include device/google/gs-common/wireless_charger/wireless_charger.mk
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
 # Increment the SVN for any official public releases
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.build.svn=31
+    ro.vendor.build.svn=32
 
 # Enable watchdog timeout loop breaker.
 PRODUCT_PROPERTY_OVERRIDES += \

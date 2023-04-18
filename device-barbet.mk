@@ -53,7 +53,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 LOCAL_PATH := device/google/barbet
 
 PRODUCT_SOONG_NAMESPACES += \
-    device/google/barbet
+    device/google/barbet \
+    hardware/qcom/wlan/legacy
 
 PRODUCT_PACKAGES += \
     libtasspkrprot

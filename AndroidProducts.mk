@@ -19,4 +19,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_barbet_hwasan.mk \
 
 COMMON_LUNCH_CHOICES := \
-    aosp_barbet-userdebug \
+    aosp_barbet-trunk_staging-userdebug \

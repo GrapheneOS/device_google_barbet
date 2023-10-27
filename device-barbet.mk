@@ -136,6 +136,11 @@ PRODUCT_PRODUCT_PROPERTIES +=\
     ro.vendor.vibrator.hal.lptrigger=0
 
 
+# Quick Start device-specific settings
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.quick_start.oem_id=00e0 \
+    ro.quick_start.device_id=barbet
+
 # Dumpstate HAL
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.1-service.barbet
@@ -210,3 +215,6 @@ PRODUCT_COPY_FILES += \
 # Workaround for Qualcomm neural network HAL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat
+
+PRODUCT_PACKAGES += \
+    NfcOverlayBarbet
